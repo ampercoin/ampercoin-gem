@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["mason@thoughtbot.com"]
   spec.summary       = %q{A simple cyptocurrency based on bitcoin}
   spec.description   = %q{A simple cyptocurrency based on bitcoin}
-  spec.homepage      = ""
+  spec.homepage      = "http://www.ampercoin.com/"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
