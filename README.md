@@ -1,6 +1,6 @@
 # Ampercoin
 
-TODO: Write a gem description
+A Ruby Library for interacting with the Ampercoin network.
 
 ## Installation
 
@@ -18,9 +18,6 @@ Or install it yourself as:
 
     $ gem install ampercoin
 
-## Usage
-
-TODO: Write usage instructions here
 
 ## Contributing
 
