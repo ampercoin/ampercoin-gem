@@ -24,4 +24,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "sqlite3"
   spec.add_dependency "activemodel"
   spec.add_dependency "activerecord"
+  spec.add_dependency "digest-sha3"
 end

@@ -22,5 +22,5 @@ else
   ActiveRecord::Tasks::DatabaseTasks.load_schema(:ruby, schema_file)
 end
 module Ampercoin
-  autoload :Account, 'ampercoin/account'
+  autoload :Address, 'ampercoin/address'
 end
