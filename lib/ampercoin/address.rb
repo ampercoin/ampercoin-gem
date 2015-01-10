@@ -1,6 +1,6 @@
 module Ampercoin
   class Address
-    CURVE = 'secp521r1'
+    CURVE = 'secp256k1'
     include OpenSSL
     attr_reader :public_key
     attr_reader :private_key
@@ -22,10 +22,14 @@ module Ampercoin
     end
 
     def verify(message, signature)
-      @key.dsa_verify_asn1(
-        Digest::SHA512.digest(message),
-        Base64.decode64(signature)
-      )
+      if signature.present?
+        @key.dsa_verify_asn1(
+          Digest::SHA256.digest(message),
+          Base64.decode64(signature)
+        )
+      else
+        false
+      end
       rescue OpenSSL::PKey::ECError
         false
     end
@@ -36,7 +40,7 @@ module Ampercoin
 
     def sign(message)
       Base64.encode64(
-        @key.dsa_sign_asn1(Digest::SHA512.digest(message))
+        @key.dsa_sign_asn1(Digest::SHA256.digest(message))
       )
     end
 
